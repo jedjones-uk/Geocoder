@@ -141,7 +141,7 @@ class BingMapsProvider extends AbstractProvider implements LocaleAwareProviderIn
                 'longitude'    => $coordinates[1],
                 'bounds'       => $bounds,
                 'streetNumber' => $streetNumber,
-                'streetName'   => $streetName,
+                'streetName'   => empty($streetName) ? null : $streetName,
                 'city'         => empty($city) ? null : $city,
                 'zipcode'      => empty($zipcode) ? null : $zipcode,
                 'county'       => empty($county) ? null : $county,
